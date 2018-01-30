@@ -7,6 +7,17 @@
 </head>
 <body>
   <h2>All Comments</h2>
+  <ul class="responses">
+  <% for(var i=0; i<comments.length; i++) {%>
+    <% if (comments[i].name.toString() == name) {%>
+
+    <li class="response">
+      <span><%= comments[i].email %></span>
+      - 
+      <span><%= comments[i].body %></span>
+    </li>
+    <% } %>
+  <% } %>
 
 </body>
 </html>
